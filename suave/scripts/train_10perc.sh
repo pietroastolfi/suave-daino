@@ -1,0 +1,28 @@
+main_suave.py \
+--epochs 100 \
+--base_lr 0.4 \
+--final_lr 0.001 \
+--warmup_epochs 5 \
+--batch_size 32 \
+--lab_batch_size 16 \
+--labels_perc 10 \
+--size_crops 224 96 \
+--nmb_crops 2 8 \
+--min_scale_crops 0.14 0.05 \
+--max_scale_crops 1. 0.14 \
+--use_fp16 true \
+--freeze_prototypes_niters 0 \
+--warmup_proj_nepochs 0 \
+--queue_length 3840 \
+--epoch_queue_starts 0 \
+--use_momentum false \
+--init_proj false \
+--wandb true \
+--epsilon 0.05 \
+--hidden_mlp 2048 \
+--multihead_eval true \
+--epsilon 0.05 \
+--mixup_lab true \
+--mixup_unlab true \
+--mixup_unlab_type globals \
+--swav_init_ckpt ./swav_800ep_pretrain.pth.tar

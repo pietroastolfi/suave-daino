@@ -1,0 +1,33 @@
+main_suave.py \
+--epochs 5 \
+--base_lr 0.03 \
+--final_lr 0.0003 \
+--warmup_epochs 0 \
+--batch_size 32 \
+--lab_batch_size 16 \
+--labels_perc 10 \
+--size_crops 224 \
+--nmb_crops 2 \
+--min_scale_crops 0.08 \
+--max_scale_crops 1.0 \
+--use_fp16 true \
+--freeze_prototypes_niters 0 \
+--warmup_proj_nepochs 0 \
+--queue_length 3840 \
+--epoch_queue_starts 0 \
+--use_momentum false \
+--init_proj true \
+--wandb true \
+--hidden_mlp 2048 \
+--multihead_eval true \
+--epsilon 0.05 \
+--light_augment_lab true \
+--color_jit_unlab false \
+--mixup_lab true \
+--mixup_unlab true \
+--mixup_unlab_type globals \
+--label_smoothing 0.001 \
+--ensemble_eval false \
+--detach_ensemble false \
+--bn_ensemble false \
+--swav_init_ckpt /path/to/ckpt.pth

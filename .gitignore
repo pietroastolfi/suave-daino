@@ -1,0 +1,6 @@
+*.pth*
+experiments/
+wandb/
+.vscode/
+**/__pycache__/
+slurm-*.out

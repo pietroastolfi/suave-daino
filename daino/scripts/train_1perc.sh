@@ -1,0 +1,35 @@
+main_daino.py \
+--arch vit_small \
+--patch_size 16 \
+--out_dim 1000 \
+--norm_last_layer false \
+--warmup_teacher_temp 0.04 \
+--teacher_temp 0.07 \
+--warmup_teacher_temp_epochs 10 \
+--use_fp16 false \
+--weight_decay 0.04 \
+--weight_decay_end 0.4 \
+--clip_grad 0 \
+--batch_size_per_gpu 64 \
+--epochs 60 \
+--freeze_last_layer 0 \
+--lr 0.00024 \
+--warmup_epochs 4 \
+--min_lr 1e-05 \
+--global_crops_scale 0.25 1.0 \
+--local_crops_scale 0.05 0.25 \
+--local_crops_number 8 \
+--seed 0 \
+--num_workers 10 \
+--optimizer adamw \
+--momentum_teacher 0.990 \
+--use_bn_in_head false \
+--drop_path_rate 0.1 \
+--lab_batch_size_per_gpu 32 \
+--labels_perc 1 \
+--init_proj false \
+--wandb true \
+--mixup_lab true \
+--mixup_unlab false \
+--mixup_unlab_type globals \
+--dino_init_ckpt ./dino_deitsmall16_pretrain_full_checkpoint.pth
